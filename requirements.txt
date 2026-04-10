@@ -1,0 +1,10 @@
+gymnasium
+stable-baselines3[extra]
+pandas
+numpy
+matplotlib
+streamlit
+fastapi
+uvicorn
+torch
+scikit-learn
