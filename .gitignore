@@ -138,11 +138,14 @@ celerybeat.pid
 .env
 .envrc
 .venv
-env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Specifically ignore the root env folder if it exists, 
+# but allow src/env/ to be tracked
+/env/
 
 # Spyder project settings
 .spyderproject
