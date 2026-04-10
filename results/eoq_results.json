@@ -1,0 +1,55 @@
+{
+    "benchmark_name": "EOQ_Traditional_Math",
+    "total_yearly_profit": 7163998.0,
+    "avg_daily_profit": 19627.39,
+    "sku_configurations": [
+        {
+            "q": 55,
+            "rop": 122
+        },
+        {
+            "q": 52,
+            "rop": 113
+        },
+        {
+            "q": 53,
+            "rop": 116
+        },
+        {
+            "q": 55,
+            "rop": 123
+        },
+        {
+            "q": 53,
+            "rop": 116
+        },
+        {
+            "q": 65,
+            "rop": 158
+        },
+        {
+            "q": 71,
+            "rop": 183
+        },
+        {
+            "q": 54,
+            "rop": 120
+        },
+        {
+            "q": 62,
+            "rop": 147
+        },
+        {
+            "q": 70,
+            "rop": 176
+        },
+        {
+            "q": 70,
+            "rop": 177
+        },
+        {
+            "q": 61,
+            "rop": 143
+        }
+    ]
+}
