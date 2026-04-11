@@ -48,6 +48,12 @@ if new_stock_sku_1 < obs[0]:
 else:
     print("❌ ERROR: Stock did not decrease. Check if demand is being processed.")
 
+# 5. 🔮 LSTM AUXILIARY CHECK
+forecast_tomorrow = new_obs[60:72]
+print("\n--- 🔮 LSTM AUXILIARY FORECAST ---")
+print(f"Predicted Demand for SKU_1 Tomorrow: {forecast_tomorrow[0]:.2f}")
+print(f"Full Forecast Vector (Day 1, 12 SKUs): \n{forecast_tomorrow}")
+
 print("\n--- 🧠 ANALYSIS ---")
 print("If you ran this for 10 days, your stock would eventually hit 0,")
 print("and you would start getting 'Stockout Penalties' (Negative Rewards).")

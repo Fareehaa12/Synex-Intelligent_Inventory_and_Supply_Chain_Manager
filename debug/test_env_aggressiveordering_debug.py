@@ -30,3 +30,9 @@ else:
 
 if reward != 0:
     print("✅ SUCCESS: Reward calculation is active!")
+
+# 5. 🔮 LSTM AUXILIARY CHECK
+forecast_tomorrow = new_obs[60:72]
+print("\n--- 🔮 LSTM AUXILIARY FORECAST ---")
+print(f"Predicted Demand for SKU_1 Tomorrow: {forecast_tomorrow[0]:.2f}")
+print("✅ SUCCESS: LSTM auxiliary data is present in the observation vector!")

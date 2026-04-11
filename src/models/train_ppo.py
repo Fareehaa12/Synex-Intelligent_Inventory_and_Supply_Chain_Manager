@@ -18,21 +18,21 @@ def train():
     model = PPO(
         policy="MlpPolicy",
         env=env,
-        learning_rate=0.0003,
+        learning_rate=0.0005, # Slightly faster than before
         n_steps=2048,
-        batch_size=64,
+        batch_size=128,       # Increased for better stability at 500k
         n_epochs=10,
         gamma=0.99, # Discount factor
         verbose=1,
         tensorboard_log="./logs/ppo_tensorboard/"
     )
 
-    print("🚀 Training PPO Agent for 100,000 steps...")
+    print("🚀 Training PPO Agent for 500,000 steps...")
     
-    # 4. Train with a checkpoint saver (saves every 20k steps)
-    checkpoint_callback = CheckpointCallback(save_freq=20000, save_path='./saved_models/ppo/', name_prefix='ppo_inv_model')
+    # 4. Train with a checkpoint saver (saves every 50k steps)
+    checkpoint_callback = CheckpointCallback(save_freq=50000, save_path='./saved_models/ppo/', name_prefix='ppo_inv_model')
     
-    model.learn(total_timesteps=100000, callback=checkpoint_callback)
+    model.learn(total_timesteps=500000, callback=checkpoint_callback)
 
     # 5. Save the Final Model
     model.save("saved_models/ppo_inventory_final")
